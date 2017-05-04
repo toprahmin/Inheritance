@@ -12,32 +12,18 @@ public class Product{
     private int productQuantity;
 
     public Product(){}
-    public Product(String productId) {
-        this.productId = productId;
-    }
-
-    public Product(String productId, double productPrice){
-        this.productId = productId;
-        this.productPrice = productPrice;
-    }
 
     public Product(String productId, double productPrice, int productQuantity){
         this.productId = productId;
         this.productPrice = productPrice;
         this.productQuantity = productQuantity;
     }
-
-    public String setProductId(){
-        productId = in.nextLine();
-        return productId;
-    }
-
+    
     public String getProductId(){
         return productId;
     }
 
     public double setProductPrice(){
-        productPrice = in.nextDouble();
         return productPrice;
     }
 
@@ -46,7 +32,6 @@ public class Product{
     }
 
     public int setProductQuantity(){
-        productQuantity = in.nextInt();
         return productQuantity;
     }
 
@@ -56,6 +41,11 @@ public class Product{
 
     public double totalProductValue(){
         productValue = productPrice * productQuantity;
+        return productValue;
+    }
+
+
+    public double getProductValue() {
         return productValue;
     }
 }

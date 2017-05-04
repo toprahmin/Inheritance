@@ -8,36 +8,43 @@ public class Inventory {
 
     private int totalProductQuantity;
     private double totalInventoryValue;
-    /*  We want the countInventory method to receive and add to the
-        totalProductQuantity value.
-     */
+    private ArrayList<Product> products = new ArrayList<Product>();
 
-    private ArrayList<Product> inventory;
-
-    public Inventory(){
-        totalProductQuantity = 0;
-        totalInventoryValue = 0;
-        inventory = new ArrayList<Product>();
+    // Create getter for arraylist
+    public int getTotalProductQuantity(){
+        return totalProductQuantity;
     }
 
-
-
-    public void addProduct(Product p){
-        inventory.add(p);
+    public double getTotalInventoryValue(){
+        return totalInventoryValue;
     }
 
-
-    public double countInventory(){
-        for(int i = 0; i < inventory.size(); i++){
-
-        }
+    // add product quantity to totalProductQuantity
+    public int addProductQuantity(){
         return 0;
     }
 
-    /* calculate the total value of each product based on the count and price
-       then add
+    public int addProductQuantity(Product j){
+        return totalProductQuantity += j.getProductQuantity();
+    }
 
-    */
+    public double addProductValue(Product j){
+        return totalInventoryValue += j.totalProductValue();
+    }
+
+
+    // Add instances of product to the Inventory ArrayList
+    public void addToInventory(Product j){
+        products.add(j);
+    }
+
+    public int countInventory(){
+            return products.size();
+    }
+    public void showInventory(){
+        System.out.println(products);
+    }
+
 
     public double sumInventoryValue(){
         return 0;
