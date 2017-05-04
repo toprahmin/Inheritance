@@ -33,4 +33,5 @@ public class TestInventory {
         //: Then
         Assert.assertEquals("The expected inventory some",expectedSumInventory, actualSumInventory,0);
     }
+    
 }
