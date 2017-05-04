@@ -10,30 +10,23 @@ public class Manager {
         Product corn = new Product("Corn", .99, 127);
         Product mangoes = new Product("Mangoes", 1.79, 31);
         Product oranges = new Product("Oranges", .79, 59);
+        Product pineapples = new Product("pineapples", 5.99, 32);
 
         inv.addToInventory(broccoli);
-        inv.addProductQuantity(broccoli);
-        inv.addProductValue(broccoli);
-
+        inv.addToInventory(pineapples);
         inv.addToInventory(potatoes);
-        inv.addProductQuantity(potatoes);
-        inv.addProductValue(potatoes);
-
         inv.addToInventory(corn);
-        inv.addProductQuantity(corn);
-        inv.addProductValue(corn);
-
         inv.addToInventory(mangoes);
-        inv.addProductQuantity(mangoes);
-        inv.addProductValue(mangoes);
-
         inv.addToInventory(oranges);
-        inv.addProductQuantity(oranges);
-        inv.addProductValue(oranges);
+
 
         System.out.println("$ " + inv.getTotalInventoryValue());
         System.out.println(inv.getTotalProductQuantity());
+        System.out.println("There are " + inv.countInventory() + " items in our inventory");
+        System.out.println(inv.showInventory());
 
+        System.out.println(inv.listOfProducts.size());
+        System.out.println(inv.inventoryValue());
 
         }
     }

@@ -8,7 +8,7 @@ public class Inventory {
 
     private int totalProductQuantity;
     private double totalInventoryValue;
-    private ArrayList<Product> products = new ArrayList<Product>();
+    ArrayList<Product> listOfProducts = new ArrayList<Product>();
 
     // Create getter for arraylist
     public int getTotalProductQuantity(){
@@ -34,15 +34,23 @@ public class Inventory {
 
 
     // Add instances of product to the Inventory ArrayList
-    public void addToInventory(Product j){
-        products.add(j);
+    public void addToInventory(Product product){
+        listOfProducts.add(product);
     }
 
     public int countInventory(){
-            return products.size();
+            return listOfProducts.size();
     }
-    public void showInventory(){
-        System.out.println(products);
+    public ArrayList showInventory(){
+        System.out.println(listOfProducts);
+        return listOfProducts;
+    }
+    public double inventoryValue(){
+        double total = 0;
+        for(Product product: listOfProducts){
+            total += product.getProductPrice() * product.getProductQuantity();
+        }
+        return total;
     }
 
 

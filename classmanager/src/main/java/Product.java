@@ -31,9 +31,6 @@ public class Product{
         return productPrice;
     }
 
-    public int setProductQuantity(){
-        return productQuantity;
-    }
 
     public int getProductQuantity(){
         return productQuantity;

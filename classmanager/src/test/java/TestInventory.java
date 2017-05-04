@@ -17,7 +17,7 @@ public class TestInventory {
         //: When
         int actualTotalProductQuantity = inventory.getTotalProductQuantity();
         //: Then
-        Assert.assertEquals(getAssertionMessage("Total Prdouct Quantity", 17), expectedTotalProductQuantity,actualTotalProductQuantity);
+        Assert.assertEquals(getAssertionMessage("Total Product Quantity", 17), expectedTotalProductQuantity,actualTotalProductQuantity);
     }
 
     @Test

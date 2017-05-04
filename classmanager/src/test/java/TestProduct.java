@@ -5,71 +5,67 @@ import org.junit.Test;
 /**
  * Created by rahmirford on 5/3/17.
  */
+
+
 public class TestProduct {
+
     Product product;
 
     @Before
-    public void setUp() {product = new Product(); }
+    public void setUp() {
+        product = new Product("oranges", 2.59, 4);
+    }
 
     // Test constructors for correct return of input one for each constructor
     @Test
-    public void testProductIdConstructor(){
+    public void testProductId() {
         //: Given
-        String prodId = "Bananas";
-        String expectedValue = prodId;
+        String expectedValue = "oranges";
+
         //: When
         String actualValue = product.getProductId();
         //: Then
-        Assert.assertEquals("The expected result is Bananas", expectedValue,actualValue);
+        Assert.assertEquals("The expected result is oranges", expectedValue, actualValue);
     }
 
+
     @Test
-    public void testProductPriceConstructor(){
+    public void testGetProductPrice() {
         //: Given
-        double prodPrice = 2.99;
-        double expectedValue = prodPrice;
+        double expectedValue = 2.59;
         //: When
         double actualValue = product.getProductPrice();
 
         //: Then
-        Assert.assertEquals("The expected result is 2.99", expectedValue,actualValue, 0);
+        Assert.assertEquals("The expected result is 2.59", expectedValue, actualValue, 0);
 
     }
 
     @Test
-    public void testProductIdProductQuantityConstructor(){
+    public void TestSetProductPrice() {
         //: Given
-        int prodQuantity = 5;
-        int expectedValue = prodQuantity;
+        double newprice = 2.59;
+        double expectedNewPrice = 2.59;
         //: When
-        int actualValue = product.getProductQuantity();
+        double actualNewPrice = product.setProductPrice();
         //: Then
-        Assert.assertEquals("The expected result is 5", expectedValue,actualValue);
+        Assert.assertEquals("The expected value of the new price is 2.59", expectedNewPrice, actualNewPrice, 0);
     }
 
-    // Test productId getter
+
+
+
     @Test
-    public void testGetProductId(){
+    public void testTotalProductValue() {
         //: Given
-        String prodId = "Bananas";
-        String expectedValue = "Bananas";
-        //: When
-        String actualValue = product.getProductId();
-        //: Then
-        Assert.assertEquals("The expected return value is 'Bananas", expectedValue, actualValue);
-    }
-    // Test ProductPrice Getter
-        @Test
-        public void testProductPrice(){
-        //: Given
-        double prodPrice = 2.49;
-        double expectedValue = prodPrice;
-        //: When
-        double actualValue = product.getProductPrice();
-        //: Then
-        Assert.assertEquals("The expected return value is 2.49 ", expectedValue, actualValue, 0);
-    }
+        double productValue = 10.36;
+        double expectedProductValue = productValue;
 
+        //: When
+        double actualProductValue = product.totalProductValue();
+        //: Then
+        Assert.assertEquals("The expected product value is 10.36", expectedProductValue,actualProductValue,0);
+    }
 
     // Test productQuantity Getter
     @Test
@@ -80,7 +76,8 @@ public class TestProduct {
         //: When
         int actualValue = product.getProductQuantity();
         //: Then
-        Assert.assertEquals("The expected return value is 2.49 ", expectedValue, actualValue, 0);
-
+        Assert.assertEquals("The expected return value is 3 ", expectedValue, actualValue, 0);
     }
+
+
 }
