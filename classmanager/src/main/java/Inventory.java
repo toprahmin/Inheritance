@@ -45,13 +45,23 @@ public class Inventory {
         System.out.println(listOfProducts);
         return listOfProducts;
     }
-    public double inventoryValue(){
+//    public double getInventoryValue(ArrayList<Product> listOfProducts) {
+//        double total = 0;
+//        for( int i = 0; i < listOfProducts.size(); i++){
+//            total += listOfProducts.get(i).getProductPrice() * listOfProducts.get(i).getProductQuantity();
+//        }
+//        return total;
+//    }
+
+    public double getInventoryValue(ArrayList<Product> listOfProducts) {
         double total = 0;
         for(Product product: listOfProducts){
             total += product.getProductPrice() * product.getProductQuantity();
         }
         return total;
     }
+
+
 
 
     public double sumInventoryValue(){

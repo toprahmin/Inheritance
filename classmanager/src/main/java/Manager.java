@@ -26,7 +26,7 @@ public class Manager {
         System.out.println(inv.showInventory());
 
         System.out.println(inv.listOfProducts.size());
-        System.out.println(inv.inventoryValue());
+        System.out.println(inv.getInventoryValue(inv.listOfProducts));
 
         }
     }

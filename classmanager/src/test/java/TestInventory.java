@@ -6,8 +6,8 @@ import java.util.*;
  * Created by rahmirford on 5/3/17.
  */
 public class TestInventory {
-
-
+    Product product = new Product("oranges", 2.59, 4);
+    ArrayList<Product> listOfProducts = new ArrayList<Product>();
     @Test
     public void TestTotalProductQuantity(){
         //: Given
@@ -58,9 +58,23 @@ public class TestInventory {
         Assert.assertEquals(expectedProductValue,actualProductValue,0);
     }
 
-public String getAssertionMessage(String str, double value) {
-        return "The expected return value for " + str + " is " + value;
+    public String getAssertionMessage(String str, double value) {
+    return "The expected return value for " + str + " is " + value;
 }
+
+    @Test
+    public void testGetInventoryValue(){
+        //: Given
+        double expectedInventoryValue = 10.36;
+        Inventory inventory = new Inventory();
+        listOfProducts.add(product);
+        //: When
+        double actualInventoryValue = inventory.getInventoryValue(listOfProducts);
+        //: Then
+        Assert.assertEquals("The expected value of our inventory is 10.36", expectedInventoryValue, actualInventoryValue,0);
+    }
+
+    }
 
 
 
@@ -103,5 +117,3 @@ public String getAssertionMessage(String str, double value) {
 //        //: Then
 //        Assert.assertEquals("The expected inventory some",expectedSumInventory, actualSumInventory,0);
 //    }
-
-}
