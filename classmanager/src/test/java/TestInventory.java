@@ -11,17 +11,17 @@ public class TestInventory {
     @Before
     public void setUp() {inv = new Inventory();}
 
-// ******* uncomment this when we work on the countInventory method ********
-//    @Test
-//    public void testCountInventory(){
-//        //: Given
-//        int x = 10;
-//        int expectedCountInventory = 10;
-//        //: When
-//        int actualCountInventory = inv.countInventory();
-//        //: Then
-//        Assert.assertEquals("The expected result", expectedCountInventory, actualCountInventory);
-//    }
+//  ******* uncomment this when we work on the countInventory method ********
+    @Test
+    public void testCountInventory(){
+        //: Given
+        int x = 10;
+        int expectedCountInventory = 10;
+        //: When
+        double actualCountInventory = inv.countInventory();
+        //: Then
+        Assert.assertEquals("The expected result", expectedCountInventory, actualCountInventory);
+    }
 
     @Test
     public void testSumInventory(){
@@ -33,5 +33,5 @@ public class TestInventory {
         //: Then
         Assert.assertEquals("The expected inventory some",expectedSumInventory, actualSumInventory,0);
     }
-    
+
 }

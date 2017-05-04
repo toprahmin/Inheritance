@@ -17,5 +17,7 @@ public class App {
         inv.addProduct(corn);
         inv.addProduct(mangoes);
         inv.addProduct(oranges);
+
+
     }
 }

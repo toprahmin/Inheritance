@@ -5,9 +5,9 @@ import java.util.ArrayList;
  */
 public class Inventory {
 
-    private double totalProductValue;
-    private int totalProductQuantity;
 
+    private int totalProductQuantity;
+    private double totalInventoryValue;
     /*  We want the countInventory method to receive and add to the
         totalProductQuantity value.
      */
@@ -16,7 +16,7 @@ public class Inventory {
 
     public Inventory(){
         totalProductQuantity = 0;
-        totalProductValue = 0;
+        totalInventoryValue = 0;
         inventory = new ArrayList<Product>();
     }
 
@@ -27,10 +27,12 @@ public class Inventory {
     }
 
 
-//    public int countInventory(){
-//        totalProductQuantity += Product.getProductQuantity();
-//        return totalProductQuantity;
-//    }
+    public double countInventory(){
+        for(int i = 0; i < inventory.size(); i++){
+
+        }
+        return 0;
+    }
 
     /* calculate the total value of each product based on the count and price
        then add

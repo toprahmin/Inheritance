@@ -6,6 +6,7 @@ import java.util.*;
 public class Product{
 
     Scanner in = new Scanner(System.in);
+    private double productValue;
     private double productPrice;
     private String productId;
     private int productQuantity;
@@ -53,4 +54,8 @@ public class Product{
         return productQuantity;
     }
 
+    public double totalProductValue(){
+        productValue = productPrice * productQuantity;
+        return productValue;
+    }
 }
