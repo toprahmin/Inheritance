@@ -9,12 +9,14 @@ import java.util.ArrayList;
  *  Try solving this without creating a copy of the list.
  *  How many swap or move operations do you need?
  */
+public class Main {
+    public static void main (String[] args) {
+        Rotary arrayList = new Rotary();
+        arrayList.randomArrayGenerator();
+        System.out.println(arrayList.toString());
 
-
-public class RotaryArray {
-    public static void main(string[] args) {
-
-        ArrayList<Integer> values = new ArrayList<>();
+        arrayList.rotateArray(5);
+        System.out.println(arrayList.toString());
 
     }
 }

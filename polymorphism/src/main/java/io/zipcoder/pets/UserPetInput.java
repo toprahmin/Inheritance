@@ -24,7 +24,7 @@ public class UserPetInput {
     }
 
     public String enterPetNames(){
-        System.out.print("Wh2at are your pet(s) names?: ");
+        System.out.print("What are your pet(s) names?: ");
         petNames = sc.nextLine();
         return petNames.toLowerCase();
     }
