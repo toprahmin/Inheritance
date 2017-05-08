@@ -8,9 +8,7 @@ public class Polymorphism{
         UserPetInput userInput = new UserPetInput();
 
         userInput.enterNumberOfPets();
-        userInput.enterPetType();
-        userInput.enterPetNames();
+        userInput.enterPetNameAndType();
 
-        System.out.println(userInput.howManyPets + " " + userInput.petType + " " + userInput.petNames);
     }
 }

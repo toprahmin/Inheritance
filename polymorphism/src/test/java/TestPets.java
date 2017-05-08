@@ -15,32 +15,31 @@ public class TestPets {
     @Test
     public void TestSpeak(){
         //: Given
-        String phrase = "Hello human";
-        String expectedPhrase = phrase;
+
+        String expectedPhrase = "Hello Human";
         //: When
         String actualPhrase = pet.speak();
         //: Then
-        Assert.assertEquals("The expected out put is Hello Human.", actualPhrase,expectedPhrase);
+        Assert.assertEquals("The expected out put is Hello Human.", expectedPhrase, actualPhrase);
     }
 
     @Test
     public void TestGetName(){
         //: Given
-        String name = "george" ;
-        String expectedName = "george";
+        String expectedName = null;
         //: When
         String actualName = pet.getName();
         //: Then
-        Assert.assertEquals("The expected name is george", actualName, expectedName);
+        Assert.assertEquals("The expected name is null", expectedName, actualName);
     }
 
     @Test
     public void TestSetName(){
         //: Given
-        String name = "george" ;
-        String expectedName = "george";
+
+        String expectedName = null;
         //: When
-        String actualName = pet.setName();
+        String actualName = pet.setName(null);
         //: Then
         Assert.assertEquals("The expected name is george", actualName, expectedName);
     }

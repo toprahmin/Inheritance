@@ -1,5 +1,6 @@
 import io.zipcoder.pets.Polymorphism;
 import io.zipcoder.pets.UserPetInput;
+import io.zipcoder.pets.Pets;
 import org.junit.Test;
 import org.junit.*;
 
@@ -15,6 +16,16 @@ public class TestUserInput {
         up = new UserPetInput();
     }
 
+    // how to test scanner?
+    @Test
+    public void TestPetGenerator(){
+        //: Given
+        Pets expected =
+        //: When
+
+        //: Then
+    }
+
     @Test
     public void TestEnterNumberOfPets() {
         //: Given
@@ -26,26 +37,5 @@ public class TestUserInput {
         Assert.assertEquals("The expected value is 3", actualInput,expectedInput);
     }
 
-    @Test
-    public void TestEnterPetType(){
-        //: Given
-        String x = "Dog";
-        String expectedInput = "dog";
-        //: When
-        String actualPetType = up.enterPetType();
-        //: Then
-        Assert.assertEquals(expectedInput,actualPetType);
-    }
-
-    @Test
-    public void TestEnterPetNames(){
-        //: Given
-        String x = "Randy Harry George";
-        String expectedPetNames = "randy harry george";
-        //: When
-        String actualPetNames = up.enterPetNames();
-        //: Then
-        Assert.assertEquals("The expected value of pet names is randy harry george", actualPetNames,expectedPetNames);
-    }
 
 }

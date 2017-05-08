@@ -4,29 +4,51 @@ import java.util.*;
 /**
  * Created by rahmirford on 5/1/17.
  */
-public class UserPetInput {
+public class UserPetInput extends Pets {
 
     int howManyPets;
     String petType;
     String petNames;
     Scanner sc = new Scanner(System.in);
-    public int enterNumberOfPets(){
-        System.out.print("How many pets do you have?: ");
+
+
+    public Pets petGenerator(String s) {
+
+        switch (s) {
+            case "dogs":
+                return new Dogs();
+
+            case "cats":
+                return new Cats();
+
+            case "snakes":
+                return new Snakes();
+
+            default:
+                return null;
+        }
+    }
+
+    public int enterNumberOfPets() {
+        System.out.println("How many pets do you have");
         howManyPets = sc.nextInt();
         return howManyPets;
-
-    }
-    // Ignore case, also try to allow for multiple pet types
-    public String enterPetType(){
-        System.out.print("What kind of pets do you have?: ");
-        petType = sc.nextLine();
-        return petType.toLowerCase();
     }
 
-    public String enterPetNames(){
-        System.out.print("What are your pet(s) names?: ");
-        petNames = sc.nextLine();
-        return petNames.toLowerCase();
+    public ArrayList enterPetNameAndType() {
+        ArrayList<Pets> petsAL = new ArrayList<Pets>();
+        for (int i = 0; i < howManyPets; i++) {
+            System.out.println("What kind of pet do you have?: ");
+            String petName = sc.next();
+            System.out.println("What is your pet's name?: ");
+            String userPetType = sc.next();
+
+            Pets p = petGenerator(userPetType);
+            p.setName(petName);
+            petsAL.add(p);
+        }
+        System.out.println(petsAL);
+        return petsAL;
     }
 
 }

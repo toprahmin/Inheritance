@@ -4,16 +4,21 @@ package io.zipcoder.pets;
  * Created by rahmirford on 5/1/17.
  */
 public class Snakes extends Pets{
-    String name;
-    String greeting;
+    private String name;
 
-    @Override
-    public String setName() {
+    public String setName(String name) {
+        this.name = name;
         return name;
     }
+
+    public String getName(){
+        return name;
+    }
+
     @Override
     public String speak(){
-        System.out.println("Sssssssssssss");
-        return greeting;
+        String phrase = "Sssssssssssss";
+        System.out.println(phrase);
+        return phrase;
     }
 }

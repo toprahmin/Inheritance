@@ -1,25 +1,24 @@
 package io.zipcoder.pets;
 
-import java.util.Scanner;
-
 /**
  * Created by rahmirford on 5/1/17.
  */
 public class Pets {
 
     private String name;
-    //private String greeting;
+
 
     public String speak(){
-      String greeting = "Hello Human";
-      return greeting;
+      String phrase = "Hello Human";
+      System.out.println(phrase);
+        return phrase;
     }
 
-    public String getName(){return name;}
+    public String getName(){
+        return name;}
 
-    public String setName(){
-        Scanner in = new Scanner(System.in);
-        name = in.nextLine();
+    public String setName(String name){
+        this.name = name;
         return name;
     }
 }
