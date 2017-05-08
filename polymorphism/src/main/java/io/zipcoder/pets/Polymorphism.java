@@ -9,6 +9,6 @@ public class Polymorphism{
 
         userInput.enterNumberOfPets();
         userInput.enterPetNameAndType();
-
+        userInput.revealPetInfo();
     }
 }

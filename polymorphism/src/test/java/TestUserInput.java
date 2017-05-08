@@ -1,3 +1,4 @@
+import io.zipcoder.pets.Dogs;
 import io.zipcoder.pets.Polymorphism;
 import io.zipcoder.pets.UserPetInput;
 import io.zipcoder.pets.Pets;
@@ -20,21 +21,39 @@ public class TestUserInput {
     @Test
     public void TestPetGenerator(){
         //: Given
-        Pets expected =
+        Dogs expected = new Dogs();
+        //: When
+        Pets actualPet = up.petGenerator("dogs");
+        //: Then
+        Assert.assertTrue(actualPet.getClass().equals(expected.getClass()));
+    }
+
+    @Test
+    public void TestEnterNumberOfPets() {
+        //: Given
+        int expectedInput = 3;
+        //: When
+        int actualInput = up.enterNumberOfPets();
+        //: Then
+        Assert.assertEquals("The expected value is 3", actualInput,expectedInput);
+    }
+
+    @Test
+    public void TestEnterPetNameAndType(){
+        //: Given
+
         //: When
 
         //: Then
     }
 
     @Test
-    public void TestEnterNumberOfPets() {
+    public void TestRevealPetInfo(){
         //: Given
-        int x = 3;
-        int expectedInput = 3;
+
         //: When
-        int actualInput = up.enterNumberOfPets();
+
         //: Then
-        Assert.assertEquals("The expected value is 3", actualInput,expectedInput);
     }
 
 

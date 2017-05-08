@@ -10,6 +10,7 @@ public class UserPetInput extends Pets {
     String petType;
     String petNames;
     Scanner sc = new Scanner(System.in);
+    ArrayList<Pets> petsAL = new ArrayList<Pets>();
 
 
     public Pets petGenerator(String s) {
@@ -36,19 +37,23 @@ public class UserPetInput extends Pets {
     }
 
     public ArrayList enterPetNameAndType() {
-        ArrayList<Pets> petsAL = new ArrayList<Pets>();
+
         for (int i = 0; i < howManyPets; i++) {
             System.out.println("What kind of pet do you have?: ");
-            String petName = sc.next();
-            System.out.println("What is your pet's name?: ");
             String userPetType = sc.next();
+            System.out.println("What is your pet's name?: ");
+            String petName = sc.next();
 
             Pets p = petGenerator(userPetType);
             p.setName(petName);
             petsAL.add(p);
         }
-        System.out.println(petsAL);
         return petsAL;
+    }
+    public void revealPetInfo(){
+        for(Pets p: petsAL){
+            System.out.println(p.getName() + " " + p.speak());
+        }
     }
 
 }
