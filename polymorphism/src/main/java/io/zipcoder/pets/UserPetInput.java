@@ -55,5 +55,4 @@ public class UserPetInput extends Pets {
             System.out.println(p.getName() + " " + p.speak());
         }
     }
-
 }
