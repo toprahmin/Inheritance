@@ -18,9 +18,11 @@ public class CheckingAccount extends Account{
         return lastWithdrawal;
     };
 
-    public void makeDeposit(){
-
+    public double makeDeposit(){
+        return 9;
+    }
+    public double makeWithdrawal(){
+        return 9;
     };
-    public void makeWithdrawal(){};
 
 }

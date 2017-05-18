@@ -10,6 +10,7 @@ public class TestBusinessAccount {
 
     @Before
     public void setUp() {
+
         businessAccount = new BusinessAccount();
     }
 
@@ -50,20 +51,23 @@ public class TestBusinessAccount {
     @Test
     public void makeDepositTest(){
         //: Given
-
-
+        double depositAmount = 75.00;
+        double expectedDepositAmount = depositAmount;
         //: When
-
+        double actualDeposit = businessAccount.makeDeposit();
         //: Then
+        Assert.assertEquals("The expected deposit amount is $75.00", expectedDepositAmount, actualDeposit,0);
     }
 
     @Test
     public void makeWithdrawalTest(){
         //: Given
-
+        double withdrawalAmount = 66.93;
+        double expectedWithdrawalAmount = withdrawalAmount;
         //: When
-
+        double actualWithdrawalAmount = businessAccount.makeWithdrawal();
         //: Then
+        Assert.assertEquals("The expected value of your withdrawal should be.", expectedWithdrawalAmount,actualWithdrawalAmount,0);
     }
 
 

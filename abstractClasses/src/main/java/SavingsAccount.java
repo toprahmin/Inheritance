@@ -1,7 +1,8 @@
 /**
  * Created by rahmirford on 5/15/17.
  */
-public class SavingsAccount extends Account {
+    public class SavingsAccount extends Account {
+
         private double balance;
         private double lastDeposit;
         private double lastWithdrawal;
@@ -18,10 +19,12 @@ public class SavingsAccount extends Account {
             return lastWithdrawal;
         };
 
-        public void makeDeposit(){
-
-        };
-        public void makeWithdrawal(){};
+        public double makeDeposit(){
+            return 0;
+        }
+        public double makeWithdrawal(){
+            return 0;
+        }
 
 }
 

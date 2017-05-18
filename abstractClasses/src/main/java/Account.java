@@ -6,11 +6,20 @@ public abstract class Account {
     private double lastDeposit;
     private double lastWithdrawal;
 
+
+    public Account(){}
+
     public abstract double getBalance();
+
     public abstract double getLastDeposit();
+
     public abstract double getLastWithdrawal();
-    public abstract void makeDeposit();
-    public abstract void makeWithdrawal();
+
+    public abstract double makeDeposit();
+
+    public abstract double makeWithdrawal();
+
+
 
 
 }
